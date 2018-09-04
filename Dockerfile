@@ -6,7 +6,7 @@ ENV GARRADIN_VERSION 0.8.5
 
 # Install packages
 RUN apk --no-cache add gettext nginx curl supervisor \
-    php7 php7-fpm php7-sqlite3 php7-pdo_sqlite php7-json
+    php5 php5-fpm php5-sqlite3 php5-pdo_sqlite php5-json
 
 # Downloading and installing Garradin
 RUN curl -L -O https://fossil.kd2.org/garradin/uv/garradin-$GARRADIN_VERSION.tar.bz2
@@ -18,8 +18,8 @@ RUN chown -R nobody: /src
 COPY config/nginx.conf /etc/nginx/nginx.conf
 
 # Configure PHP-FPM
-COPY config/fpm-pool.conf /etc/php7/php-fpm.d/zzz_custom.conf
-COPY config/php.ini /etc/php7/conf.d/zzz_custom.ini
+COPY config/fpm-pool.conf /etc/php5/php-fpm.d/zzz_custom.conf
+COPY config/php.ini /etc/php5/conf.d/zzz_custom.ini
 
 # Configure supervisord
 COPY config/supervisord.conf /etc/supervisor/conf.d/supervisord.conf
