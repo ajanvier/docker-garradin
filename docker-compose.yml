@@ -1,0 +1,10 @@
+version: '3.5'
+
+services:
+    garradin:
+        image: ajanvier/garradin
+        container_name: garradin
+        ports:
+            - "80:80"
+        volumes:
+            - ./association.sqlite:/src/association.sqlite
