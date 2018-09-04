@@ -6,7 +6,7 @@ ENV GARRADIN_VERSION 0.8.5
 
 # Install packages
 RUN apk --no-cache add gettext nginx curl supervisor \
-    php5 php5-fpm php5-sqlite3 php5-pdo_sqlite php5-json
+    php5 php5-fpm php5-sqlite3 php5-pdo_sqlite php5-json php5-openssl
 
 # Downloading and installing Garradin
 RUN curl -L -O https://fossil.kd2.org/garradin/uv/garradin-$GARRADIN_VERSION.tar.bz2
