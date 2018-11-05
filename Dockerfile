@@ -2,7 +2,7 @@ FROM alpine:latest
 LABEL Maintainer="Aurélien JANVIER <dev@ajanvier.fr>" \
       Description="Unofficial Docker image for Garradin."
 
-ENV GARRADIN_VERSION 0.8.5
+ENV GARRADIN_VERSION 0.9.0
 
 # Install packages
 RUN apk --no-cache add gettext nginx curl supervisor \
